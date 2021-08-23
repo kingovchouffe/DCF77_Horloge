@@ -73,7 +73,7 @@ Connection ~ 3350 2350
 Wire Wire Line
 	3350 2350 3700 2350
 $Comp
-L Connector:USB_B_Micro J1
+L DCF77_Horloge-rescue:USB_B_Micro-Connector J1
 U 1 1 6115A94F
 P 1050 1900
 F 0 "J1" H 1000 2250 50  0000 C CNN
@@ -618,4 +618,54 @@ F 3 "~" H 4600 1650 50  0001 C CNN
 	1    4600 1650
 	0    1    1    0   
 $EndComp
+Text GLabel 8950 1450 2    50   Input ~ 0
+SCL
+Text GLabel 8950 1350 2    50   Input ~ 0
+SDA
+$Comp
+L Device:R R9
+U 1 1 611EA76E
+P 8850 1150
+F 0 "R9" H 8800 1100 50  0000 R CNN
+F 1 "2K" H 8780 1195 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 8780 1150 50  0001 C CNN
+F 3 "~" H 8850 1150 50  0001 C CNN
+	1    8850 1150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 611EB153
+P 8600 1150
+F 0 "R8" H 8750 1150 50  0000 R CNN
+F 1 "2K" H 8750 1250 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 8530 1150 50  0001 C CNN
+F 3 "~" H 8600 1150 50  0001 C CNN
+	1    8600 1150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8850 1300 8850 1350
+Wire Wire Line
+	8850 1350 8950 1350
+Wire Wire Line
+	8950 1450 8600 1450
+Wire Wire Line
+	8600 1450 8600 1300
+Wire Wire Line
+	8600 1000 8750 1000
+$Comp
+L power:+3.3V #PWR011
+U 1 1 611EE2A2
+P 8750 1000
+F 0 "#PWR011" H 8750 850 50  0001 C CNN
+F 1 "+3.3V" H 8750 1100 50  0000 L CNN
+F 2 "" H 8750 1000 50  0001 C CNN
+F 3 "" H 8750 1000 50  0001 C CNN
+	1    8750 1000
+	1    0    0    -1  
+$EndComp
+Connection ~ 8750 1000
+Wire Wire Line
+	8750 1000 8850 1000
 $EndSCHEMATC

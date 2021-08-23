@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name DCF77_Horloge-rescue)(type Legacy)(uri ${KIPRJMOD}/DCF77_Horloge-rescue.lib)(options "")(descr ""))
+)

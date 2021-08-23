@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MCU_RaspberryPi_RP2040:RP2040 U3
+L DCF77_Horloge-rescue:RP2040-MCU_RaspberryPi_RP2040 U3
 U 1 1 61172778
 P 3750 4250
 F 0 "U3" H 2500 6100 50  0000 C CNN
@@ -686,7 +686,7 @@ Wire Wire Line
 Wire Wire Line
 	2300 5050 2500 5050
 Connection ~ 2300 5050
-Text GLabel 5000 2950 2    50   Input ~ 0
+Text GLabel 5000 5450 2    50   Input ~ 0
 STATUS_BAT
 Text GLabel 5000 5650 2    50   Input ~ 0
 DCF
@@ -739,8 +739,6 @@ F 3 "~" H 8050 5100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8250 4700 8750 4700
-Wire Wire Line
 	8250 4800 8750 4800
 Wire Wire Line
 	8250 4900 8750 4900
@@ -754,12 +752,6 @@ Wire Wire Line
 	8250 5300 8750 5300
 Wire Wire Line
 	8250 5400 8750 5400
-Wire Wire Line
-	8250 5500 8750 5500
-Wire Wire Line
-	8250 5600 8750 5600
-Text Label 8750 4700 2    50   ~ 0
-GPIO15
 Text Label 8750 4800 2    50   ~ 0
 GPIO16
 Text Label 8750 4900 2    50   ~ 0
@@ -774,12 +766,6 @@ Text Label 8750 5300 2    50   ~ 0
 GPIO21
 Text Label 8750 5400 2    50   ~ 0
 GPIO22
-Text Label 8750 5500 2    50   ~ 0
-GPIO23
-Text Label 8750 5600 2    50   ~ 0
-GPIO24
-Wire Wire Line
-	5000 4450 5500 4450
 Wire Wire Line
 	5000 4550 5500 4550
 Wire Wire Line
@@ -794,12 +780,6 @@ Wire Wire Line
 	5000 5050 5500 5050
 Wire Wire Line
 	5000 5150 5500 5150
-Wire Wire Line
-	5000 5250 5500 5250
-Wire Wire Line
-	5000 5350 5500 5350
-Text Label 5500 4450 2    50   ~ 0
-GPIO15
 Text Label 5500 4550 2    50   ~ 0
 GPIO16
 Text Label 5500 4650 2    50   ~ 0
@@ -814,10 +794,43 @@ Text Label 5500 5050 2    50   ~ 0
 GPIO21
 Text Label 5500 5150 2    50   ~ 0
 GPIO22
-Text Label 5500 5250 2    50   ~ 0
-GPIO23
-Text Label 5500 5350 2    50   ~ 0
-GPIO24
 Text Label 9850 3200 2    50   ~ 0
 QSPI_SD3
+$Comp
+L power:GND #PWR0101
+U 1 1 6120ED65
+P 8250 4700
+F 0 "#PWR0101" H 8250 4450 50  0001 C CNN
+F 1 "GND" H 8255 4527 50  0000 C CNN
+F 2 "" H 8250 4700 50  0001 C CNN
+F 3 "" H 8250 4700 50  0001 C CNN
+	1    8250 4700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0102
+U 1 1 6122B9EF
+P 8750 5600
+F 0 "#PWR0102" H 8750 5450 50  0001 C CNN
+F 1 "+3.3V" V 8750 5850 50  0000 C CNN
+F 2 "" H 8750 5600 50  0001 C CNN
+F 3 "" H 8750 5600 50  0001 C CNN
+	1    8750 5600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8250 5600 8750 5600
+$Comp
+L power:+5V #PWR0103
+U 1 1 612300E3
+P 8750 5500
+F 0 "#PWR0103" H 8750 5350 50  0001 C CNN
+F 1 "+5V" V 8750 5600 50  0000 L CNN
+F 2 "" H 8750 5500 50  0001 C CNN
+F 3 "" H 8750 5500 50  0001 C CNN
+	1    8750 5500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8250 5500 8750 5500
 $EndSCHEMATC
