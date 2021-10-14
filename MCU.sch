@@ -14,9 +14,11 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L DCF77_Horloge-rescue:RP2040-MCU_RaspberryPi_RP2040 U3
+L DCF77_Horloge-rescue:RP2040-MCU_RaspberryPi_RP2040-DCF77_Horloge-rescue U3
 U 1 1 61172778
 P 3750 4250
+AR Path="/61172778" Ref="U3"  Part="1" 
+AR Path="/61171C55/61172778" Ref="U3"  Part="1" 
 F 0 "U3" H 2500 6100 50  0000 C CNN
 F 1 "RP2040" H 4500 2300 50  0000 C CNN
 F 2 "RP2040_minimal:RP2040-QFN-56" H 3000 4250 50  0001 C CNN
