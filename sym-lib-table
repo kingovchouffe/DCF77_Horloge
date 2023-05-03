@@ -1,3 +1,4 @@
 (sym_lib_table
-  (lib (name DCF77_Horloge-rescue)(type Legacy)(uri ${KIPRJMOD}/DCF77_Horloge-rescue.lib)(options "")(descr ""))
+  (version 7)
+  (lib (name "DCF77_Horloge-rescue")(type "KiCad")(uri "${KIPRJMOD}/DCF77_Horloge-rescue.kicad_sym")(options "")(descr ""))
 )
